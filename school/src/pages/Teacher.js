@@ -3,7 +3,6 @@ import { getStudentsByTeacherId } from "../services/api-services";
 import "../style.css";
 
 const Teacher = (props) => {
-  const [studentId, setStudentId] = useState("");
   const [data, setData] = useState();
 
   const fetchTeacher = async () => {
@@ -24,7 +23,33 @@ const Teacher = (props) => {
         Get My Class Information
       </button>
 
-      {data && <p className="teacher-result"><b>Teacher:</b> {data}</p>}
+     {data && (
+  <div className="teacher-result">
+    {data && Array.isArray(data) && data.length > 0 ? (
+            <div className="teacher-result">
+              
+              {data.map((item, index) => (
+      
+                <p key={index}>
+           {index + 1} &nbsp; Name: {item.name}
+</p>
+                
+              ))}
+              
+            </div>
+            
+          ) : (
+              
+              <p>No data available</p>
+              
+          )}
+          
+
+        </div>
+        
+      )}
+      
+
     </div>
   );
 };
