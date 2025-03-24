@@ -16,10 +16,9 @@ const App = () => {
 
   return (
     <Router>
-      {user && <Navbar />}
-      {/* {userData?.role==='STUDENT' ?  } */}
+      {/* {user && <Navbar />} */}
       <Routes>
-        <Route path="/" element={user ? <Navigate to="/students" /> : <Login onLoginSuccess={handleLoginSuccess} />} />
+        <Route path="/" element={user?.role==='STUDENT' ? <Navigate to="/students" /> :user?.role==='TEACHER'?<Navigate to="/teachers" /> : <Login onLoginSuccess={handleLoginSuccess} />} />
         <Route path="/students" element={user?.role==='STUDENT' ? <Student userData={user} /> : <Navigate to="/" />} />
         <Route path="/teachers" element={user?.role==='TEACHER' ? <Teacher userData={user} /> : <Navigate to="/" />} />
       </Routes>
