@@ -1,8 +1,6 @@
-# SchoolInt
- 
-#  School Management System (Spring Boot + React)
+# SchoolInt (Spring Boot + React)
 
-This is a **full-stack school management system** built with **Spring Boot** for the backend and **React** for the frontend. The system includes authentication, student-teacher management, and role-based access.
+This is a **full-stack SchoolInt system** built with **Spring Boot** for the backend and **React** for the frontend. The system includes authentication, student-teacher management, and role-based access.
 
 ##  Features
 - **User Authentication** (Login with Email & Password)
