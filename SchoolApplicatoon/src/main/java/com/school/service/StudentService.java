@@ -30,7 +30,7 @@ public class StudentService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    // ✅ Login method
+    //  Login method
     public Optional<User> login(String email, String password) {
         Optional<User> userOpt = userRepository.findByEmail(email);
         if (userOpt.isPresent()) {
@@ -44,7 +44,7 @@ public class StudentService {
         return Optional.empty();
     }
 
-    // ✅ Get student details by userId
+    //  Get student details by userId
     public Optional<Map<String, Object>> getStudentByUserId(Long userId) {
         return studentRepository.findByUserId(userId).map(student -> {
             Map<String, Object> response = new HashMap<>();
@@ -55,7 +55,7 @@ public class StudentService {
         });
     }
 
-    // ✅ Get the teacher's name using student userId
+    //  Get the teacher's name using student userId
     public String getTeacherNameByUserId(Long userId) {
         Optional<Student> student = studentRepository.findByUserId(userId);
         return student.map(s -> {
@@ -67,7 +67,7 @@ public class StudentService {
         }).orElse("Student not found");
     }
 
-    // ✅ Get all students under a specific teacher using teacher's userId
+    //  Get all students under a specific teacher using teacher's userId
     public List<Map<String, Object>> getStudentsByTeacherUserId(Long userId) {
         return studentRepository.findByTeacherUserId(userId).stream().map(student -> {
             Map<String, Object> response = new HashMap<>();
@@ -80,7 +80,7 @@ public class StudentService {
         }).toList();
     }
 
-    // ✅ Get all teachers (for Principal role)
+    //  Get all teachers (for Principal role)
     public List<Map<String, Object>> getAllTeachers() {
         return teacherRepository.findAll().stream().map(teacher -> {
             Map<String, Object> response = new HashMap<>();
@@ -92,7 +92,7 @@ public class StudentService {
         }).toList();
     }
 
-    // ✅ Get all students (for Principal role)
+    //  Get all students (for Principal role)
     public List<Map<String, Object>> getAllStudents() {
         return studentRepository.findAll().stream().map(student -> {
             Map<String, Object> response = new HashMap<>();
@@ -104,7 +104,7 @@ public class StudentService {
         }).toList();
     }
 
-    // ✅ Get all students and teachers if user is Principal
+    //  Get all students and teachers if user is Principal
     public Map<String, Object> getAllStudentsAndTeachersForPrincipal(Long userId) {
         Optional<User> userOpt = userRepository.findById(userId);
         if (userOpt.isPresent() && "PRINCIPAL".equals(userOpt.get().getRole())) {
