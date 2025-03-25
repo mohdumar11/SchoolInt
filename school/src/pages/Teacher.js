@@ -17,37 +17,31 @@ const Teacher = (props) => {
 
   return (
     <div className="teacher-container">
-      <h2 className="teacher-title">Teacher Details</h2>
+      <h2 className="teacher-title">Teacher Dashboard</h2>
       
-      <button onClick={fetchTeacher} className="teacher-button">
+      {!data && <button onClick={fetchTeacher} className="teacher-button">
         Get My Class Information
-      </button>
+      </button>}
 
-     {data && (
+    {data && (
   <div className="teacher-result">
-    {data && Array.isArray(data) && data.length > 0 ? (
-            <div className="teacher-result">
-              
-              {data.map((item, index) => (
-      
-                <p key={index}>
-           {index + 1} &nbsp; Name: {item.name}
-</p>
-                
-              ))}
-              
-            </div>
-            
-          ) : (
-              
-              <p>No data available</p>
-              
-          )}
-          
+    {Array.isArray(data) && data.length > 0 ? (
+      <div >
+        <h3>Class Students</h3>
+        <ul className="student-list">
+          {data.map((item, index) => (
+            <li key={index} className="student-item">
+              <strong>Name:</strong> {item.name}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ) : (
+      <p>No students available</p>
+    )}
+  </div>
+)}
 
-        </div>
-        
-      )}
       
 
     </div>

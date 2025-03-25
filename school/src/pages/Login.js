@@ -12,10 +12,10 @@ const Login = ({ onLoginSuccess }) => {
 
     if (user) {
       if (user.role === "STUDENT") {
-        const studentData = await getStudentById(user.id); // ✅ Fetch student details
+        const studentData = await getStudentById(user.id);
         if (studentData) {
           console.log("Student Data:", studentData);
-          onLoginSuccess({ ...user, student: studentData }); // ✅ Pass student details
+          onLoginSuccess({ ...user, student: studentData }); 
         } else {
           setError("Failed to fetch student details");
         }
@@ -24,7 +24,7 @@ const Login = ({ onLoginSuccess }) => {
         const teacherData = await getStudentsByTeacherId(user.id);
          if (teacherData) {
           console.log("teacherData", teacherData);
-          onLoginSuccess({ ...user, teacher: teacherData }); // ✅ Pass student details
+          onLoginSuccess({ ...user, teacher: teacherData }); 
         } else {
           setError("Failed to fetch student details");
         }

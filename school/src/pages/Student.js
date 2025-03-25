@@ -20,17 +20,21 @@ const Student = (props) => {
 
   return (
     <div className="student-container">
-      <h2 className="student-title">Student Details</h2>
+      <h2 className="student-title">Student Dashboard</h2>
       
-      <button onClick={fetchStudent} className="student-button">
+      {!studentData && <button onClick={fetchStudent} className="student-button">
         Get ClassTeacher Info
-      </button>
-
+      </button>}
+                
+      <div className="teacher-result">
+        {studentData && <h3 >Class Teacher</h3>}
       {studentData && (
+        
         <div className="student-result">
-          <p><b>Name:</b> {studentData}</p>
-        </div>
-      )}
+    <p className="student-name"><b>Name:</b> {studentData}</p>
+  </div>
+)}</div>
+
     </div>
   );
 };

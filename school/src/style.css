@@ -53,104 +53,208 @@ body {
   font-size: 14px;
 }
 
-/* Student Page Styling */
+/* Styling for Student Dashboard */
 .student-container {
-  width: 350px;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #f8f9fa; /* Light Gray Background */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 50px auto;
 }
 
-/* Title */
+/* Student Title */
 .student-title {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: bold;
-  margin-bottom: 15px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-/* Input Field */
-.student-input {
-  width: 90%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-
-/* Button */
+/* Fetch Button */
 .student-button {
-  width: 100%;
-  padding: 10px;
-  background: #4CAF50;
+  background-color: #007bff; /* Blue Color */
   color: white;
   border: none;
-  cursor: pointer;
+  padding: 12px 20px;
   font-size: 16px;
-  border-radius: 5px;
-  transition: background 0.3s;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .student-button:hover {
-  background: #45a049;
+  background-color: #0056b3;
 }
 
-/* Teacher Page Styling */
-.teacher-container {
-  width: 350px;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 50px auto;
+/* Result Container */
+.student-result {
+  margin-top: 20px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  border-left: 6px solid #007bff; /* Blue left border */
 }
 
-/* Title */
-.teacher-title {
-  font-size: 22px;
+/* Student Name */
+.student-name {
+  font-size: 18px;
   font-weight: bold;
-  margin-bottom: 15px;
+  color: #333;
 }
 
-/* Input Field */
-.teacher-input {
-  width: 90%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 15px;
+
+/* Styling for Teacher Dashboard */
+.teacher-container {
+  max-width: 550px;
+  width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #f8f9fa; /* Light Gray Background */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  text-align: center;
 }
 
-/* Button */
+/* Dashboard Title */
+.teacher-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Fetch Button */
 .teacher-button {
-  width: 100%;
-  padding: 10px;
-  background: #2196F3;
+  background-color: #28a745; /* Green color */
   color: white;
   border: none;
-  cursor: pointer;
+  padding: 12px 20px;
   font-size: 16px;
-  border-radius: 5px;
-  transition: background 0.3s;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .teacher-button:hover {
-  background: #1976D2;
+  background-color: #218838;
 }
 
-/* Teacher Name Result */
+/* Results Container */
 .teacher-result {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 15px;
+  margin-top: 20px;
+  text-align: left;
 }
 
+/* Card Styling */
+.class-card {
+  background: #ffffff;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #28a745; /* Green left border */
+}
+
+/* Student List */
+.student-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.student-item {
+  background: #f1f1f1;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  border-left: 4px solid #28a745; /* Green border */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.student-item strong {
+  color: #333;
+}
+
+
+.principal-container {
+  max-width: 650px;
+  width: 500px;
+  margin-top: 40px auto;
+  padding: 25px;
+  background: #f8f9fa; /* Light Gray Background */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* Dashboard Title */
+.principal-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Fetch Button */
+.principal-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.principal-button:hover {
+  background-color: #0056b3;
+}
+
+/* Results Container */
+.principal-result {
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* Card Styling */
+.card {
+  background: #ffffff;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #007bff;
+}
+
+/* Section Title */
+.card h3 {
+  font-size: 22px;
+  color: #444;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
+/* List Styling */
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-item {
+  background: #f1f1f1;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  border-left: 4px solid #007bff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.list-item strong {
+  color: #333;
+}
