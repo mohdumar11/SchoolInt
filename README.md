@@ -38,7 +38,7 @@ This is a **full-stack school management system** built with **Spring Boot** for
 ### **Principal API**
 | Method | Endpoint | Description |
 |--------|---------|-------------|
-| `GET` | `/api/students/principal/{userId}/all-users` | Get all students & teachers (Only for PRINCIPAL role) | Building...
+| `GET` | `/api/students/all-users/{userId}` | Get all students & teachers (Only for PRINCIPAL role) 
 
 ---
 
